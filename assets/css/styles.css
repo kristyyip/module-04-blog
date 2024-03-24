@@ -1,0 +1,60 @@
+/* general styling */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+    color: white;
+    text-wrap: wrap;
+    padding: 60px;
+    position: absolute;
+}
+
+h2 {
+    font-size: 30px;
+    padding: 0 30px;
+}
+
+img {
+    width: 75%;
+}
+
+/* header */
+header {
+    text-align: end;
+    font-size: 40px;
+    padding: 20px;
+    border-bottom: 6px double black;
+}
+
+/* main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 150%;
+}
+
+section {
+    width: 50%;
+    height: 750px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-right: 6px double black;
+}
+
+form {
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 45px;
+    }
+}

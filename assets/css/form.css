@@ -1,0 +1,30 @@
+label {
+    display: block;
+    padding: 15px 0 5px 0;
+    text-align: left;
+    position: relative;
+    left: 10%;
+    width: fit-content;
+}
+
+input {
+    width: 80%;
+}
+
+button {
+    width: 30%;
+    margin: 30px 0;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+#msg {
+    padding-top: 15px;
+    color: red;
+    text-align: left;
+    position: relative;
+    left: 10%;
+    width: fit-content;
+}
