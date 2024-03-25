@@ -32,12 +32,18 @@ function addBlogPostToArray() {
 
     // retrieve current value in blogPostsArray from local storage and parse string back into an array
     blogPostsArray = JSON.parse(localStorage.getItem("blogPostsArray"));
+    lastObject = blogPostsArray[blogPostsArray.length - 1];
 
-    // add blogPostObject to blogPostArray
-    blogPostsArray.push(blogPostObject);
+    // validation to prevent consecutive duplicate posts, adds blogPostObject to blogPostArray if new post
+    console.log(blogPostsArray[length - 1]);
+    console.log(blogPostObject);
 
-    // set blogPostsArray in local storage to new array with added blog post entry
-    localStorage.setItem("blogPostsArray", JSON.stringify(blogPostsArray));
+    if ((lastObject.username !== blogPostObject.username) && (lastObject.title !== blogPostObject.title) && (lastObject.content != blogPostObject.content)) {
+        blogPostsArray.push(blogPostObject);
+
+        // set blogPostsArray in local storage to new array with added blog post entry
+        localStorage.setItem("blogPostsArray", JSON.stringify(blogPostsArray));
+    }
 }
 
 // load blog posts from blogPostArray and create + display them on page
@@ -68,7 +74,7 @@ function loadblogPosts() {
         //  create username (p) element and append to created article element
         const usernameEl = document.createElement("p")
         usernameEl.className = "username";
-        usernameEl.textContent = blogPostsArray[i].username;
+        usernameEl.textContent = `Posted by ${blogPostsArray[i].username}`;
         articleEl.appendChild(usernameEl);
     }
 }
@@ -80,5 +86,6 @@ backBtn.addEventListener("click",  function (event) {
 });
 
 // run functions
+
 addBlogPostToArray();
 loadblogPosts();

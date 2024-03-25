@@ -29,35 +29,17 @@ img {
 .light {
     color: black;
     background-color: white;
+    border-color: black;
 }
 
-.light header {
-    border-bottom: 6px double black
-}
-
-.light section {
-    border-right: 6px double black;
-}
-
-.light footer {
-    border-top: 6px double black;
+.light article {
+    border: 1px solid black;
 }
 
 .dark {
     color: #8d8d8d;
     background-color: var(--dark-gray);
-}
-
-.dark header {
-    border-bottom: 6px double var(--gray);
-}
-
-.dark section {
-    border-right: 6px double var(--gray);
-}
-
-.dark footer {
-    border-top: 6px double var(--gray);
+    border-color: var(--gray);
 }
 
 /* header */
@@ -68,4 +50,10 @@ header p {
 
 header p:hover {
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 45px;
+    }
 }

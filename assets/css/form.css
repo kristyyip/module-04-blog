@@ -4,6 +4,7 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    border-bottom: 6px double;
 }
 
 /* main element, split the screen to show two sections */
@@ -24,6 +25,7 @@ section {
     justify-content: center;
     align-items: center;
     position: relative;
+    border-right: 6px double;
 }
 
 form {
@@ -65,10 +67,4 @@ button:hover {
     position: relative;
     left: 10%;
     width: fit-content;
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 45px;
-    }
 }
