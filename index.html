@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/form.css">
-</head>
-<body>
-    
-    <script src="./assets/js/form.js"></script>
-    <script src="./assets/js/logic.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My First Blog</title>
+        <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="stylesheet" href="./assets/css/form.css">
+    </head>
+
+    <body class="light">
+        <header>
+            <p id="theme-switcher">&#127770;</p>
+        </header>
+
+        <main>
+            <section>
+                <h1>My First Blog</h1>
+                <img id="circle" src="https://pngimg.com/uploads/sun/sun_PNG13421.png" alt="a sun with a gradient going from yellow to orange">
+            </section>
+
+            <form method="POST">
+                <h2>What's on your mind?</h2>
+                <div class="form-input">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">
+                </div>
+                <div class="form-input">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title">
+                </div>
+                <div class="form-input">
+                    <label for="content">Content</label>
+                    <textarea name="content" id="content"></textarea>
+                </div>
+                <div id="msg"></div>
+                <button id="submit">Submit</button>
+            </form>
+        </main>
+
+        
+        <script src="./assets/js/form.js"></script>
+        <script src="./assets/js/logic.js"></script>
+    </body>
 </html>

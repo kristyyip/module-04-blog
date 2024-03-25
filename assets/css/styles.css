@@ -1,0 +1,94 @@
+/* general styling */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+    color: white;
+    text-wrap: wrap;
+    padding: 60px;
+    position: absolute;
+}
+
+h2 {
+    font-size: 30px;
+    padding: 0 30px;
+}
+
+img {
+    width: 75%;
+}
+
+/* light mode / dark mode */
+.light {
+    color: black;
+    background-color: white;
+}
+
+.light header {
+    border-bottom: 6px double black
+}
+
+.light section {
+    border-right: 6px double black;
+}
+
+.dark {
+    color: #8d8d8d;
+    background-color: #424242
+}
+
+.dark header {
+    border-bottom: 6px double #5f5f5f;
+}
+
+.dark section {
+    border-right: 6px double #5f5f5f;
+}
+
+/* header */
+header {
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header p {
+    padding-right: 20px;
+}
+
+header p:hover {
+    cursor: pointer;
+}
+
+/* main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 150%;
+}
+
+section {
+    width: 50%;
+    height: 750px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+form {
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 45px;
+    }
+}
