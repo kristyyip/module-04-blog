@@ -1,0 +1,52 @@
+/* header */
+header {
+    font-size: 40px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    padding: 0 20px;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+#back {
+    height: fit-content;
+    width: 100px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+#back:hover {
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    width: 100%;
+}
+
+footer p {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: steelblue;
+}
