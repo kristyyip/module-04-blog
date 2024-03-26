@@ -1,16 +1,16 @@
 // grab all referencese to DOM elements
-mainEl = document.querySelector("main");
-backBtn = document.querySelector("#back");
+const mainEl = document.querySelector("main");
+const backBtn = document.querySelector("#back");
 
-// retrieve values from local storage
+// retrieve user input values from local storage
 function loadFromLocalStorage() {
     let blogPostObject = {}
 
-    username = localStorage.getItem("username");
-    title = localStorage.getItem("title");
-    content = localStorage.getItem("content");
+    let username = localStorage.getItem("username");
+    let title = localStorage.getItem("title");
+    let content = localStorage.getItem("content");
 
-    // create object for blog post
+    // create object for blog post and set properties to local storage values
     blogPostObject = {
         username: username,
         title: title,
@@ -20,25 +20,24 @@ function loadFromLocalStorage() {
     return blogPostObject;
 }
 
-// 
+// add submission for blog post into array
 function addBlogPostToArray() {
     let blogPostsArray = [];
     let blogPostObject = loadFromLocalStorage();
     
     // create key:value pair in local storage if blogPostsArray doesn't exist yet
+    // src: https://stackoverflow.com/questions/16010827/html5-localstorage-checking-if-a-key-exists
     if (localStorage.getItem("blogPostsArray") === null) {
         localStorage.setItem("blogPostsArray", JSON.stringify(blogPostsArray));
     }
 
     // retrieve current value in blogPostsArray from local storage and parse string back into an array
     blogPostsArray = JSON.parse(localStorage.getItem("blogPostsArray"));
-    lastObject = blogPostsArray[blogPostsArray.length - 1];
+    let lastObject = blogPostsArray[blogPostsArray.length - 1];
 
     // validation to prevent consecutive duplicate posts, adds blogPostObject to blogPostArray if new post
-    console.log(blogPostsArray[length - 1]);
-    console.log(blogPostObject);
-
-    if ((lastObject.username !== blogPostObject.username) && (lastObject.title !== blogPostObject.title) && (lastObject.content != blogPostObject.content)) {
+    if ((blogPostsArray.length === 0) || (lastObject.username !== blogPostObject.username) && (lastObject.title !== blogPostObject.title) && (lastObject.content != blogPostObject.content)) {
+        // add object to end of array
         blogPostsArray.push(blogPostObject);
 
         // set blogPostsArray in local storage to new array with added blog post entry
@@ -48,8 +47,8 @@ function addBlogPostToArray() {
 
 // load blog posts from blogPostArray and create + display them on page
 function loadblogPosts() {
-    // retrieve
-    const blogPostsArray = JSON.parse(localStorage.getItem("blogPostsArray"));
+    // retrieve blogPostsArray from local storage, parse string into array
+    let blogPostsArray = JSON.parse(localStorage.getItem("blogPostsArray"));
 
     // iterate through blogPostsArray to get blog post information at each index
     for (i=0; i < blogPostsArray.length; i++) {
@@ -58,7 +57,7 @@ function loadblogPosts() {
         mainEl.appendChild(article);
 
         // select current article element being created in this iteration
-        articleEl = document.querySelectorAll("article")[i];
+        let articleEl = document.querySelectorAll("article")[i];
 
         // create title (h3) element and append to created article element
         const titleEl = document.createElement("h3");
@@ -80,12 +79,10 @@ function loadblogPosts() {
 }
 
 // goes back to index.html when back button is clicked
-backBtn.addEventListener("click",  function (event) {
-    event.preventDefault();
+backBtn.addEventListener("click",  function () {
     window.location = "index.html"
 });
 
 // run functions
-
 addBlogPostToArray();
 loadblogPosts();

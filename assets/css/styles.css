@@ -32,10 +32,6 @@ img {
     border-color: black;
 }
 
-.light article {
-    border: 1px solid black;
-}
-
 .dark {
     color: #8d8d8d;
     background-color: var(--dark-gray);
@@ -43,7 +39,6 @@ img {
 }
 
 /* header */
-
 header p {
     padding: 0 20px;
 }
@@ -52,6 +47,7 @@ header p:hover {
     cursor: pointer;
 }
 
+/* change h1 font size when screen width is <= 768px */
 @media (max-width: 768px) {
     h1 {
         font-size: 45px;
