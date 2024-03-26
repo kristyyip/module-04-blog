@@ -5,44 +5,37 @@ contentInput = document.querySelector("#content");
 msg = document.querySelector("#msg");
 submitBtn = document.querySelector("#submit");
 
-let blogPostsArray = []
-
+// set user inputs as key:value pairs in local storage
 function updateLocalStorage() {
     localStorage.setItem("username", usernameInput.value);
     localStorage.setItem("title", titleInput.value);
     localStorage.setItem("content", contentInput.value);
-};
-
-function loadFromLocalStorage() {
-    username = localStorage.getItem("username");
-    title = localStorage.getItem("title");
-    content = localStorage.getItem("content");
-
-    console.log(username, title, content);
-
-    let blogPostObject = {
-        username: username,
-        title: title,
-        content: content
-    }
-
-    blogPostsArray.push(blogPostObject);
-    console.log(blogPostsArray);
-    return blogPostsArray;
 }
 
-// 
-submitBtn.addEventListener("click",  function (event) {
+// listen for click on submit button to store input values into local storage and redirect user to blog.html
+submitBtn.addEventListener("click",  function(event) {
+    // prevent default behavior
     event.preventDefault();
+
+    // validation to check if all fields have been filled out
     if ((usernameInput.value === "" ) || (titleInput.value === "") || (contentInput.value === "")) {
+        // show error message if any field is empty
         msg.textContent = "Please make sure all fields are completed to submit the form."
     }
     else {
+        // no error message
         msg.textContent = ""
 
+        // set key:value pairs in local storage
         updateLocalStorage();
-        loadFromLocalStorage();
 
+        // redirect to blog.html
         window.location = "blog.html"
     }
-});
+})
+
+// add window location href to local storage on page load of index.html
+// src: https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
+window.onload = (event) => {
+    localStorage.setItem("windowLocation", window.location.href);
+}

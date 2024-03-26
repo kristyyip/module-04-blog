@@ -1,4 +1,9 @@
 /* general styling */
+:root {
+    --dark-gray: #424242;
+    --gray: #5f5f5f;
+}
+
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -24,69 +29,25 @@ img {
 .light {
     color: black;
     background-color: white;
-}
-
-.light header {
-    border-bottom: 6px double black
-}
-
-.light section {
-    border-right: 6px double black;
+    border-color: black;
 }
 
 .dark {
     color: #8d8d8d;
-    background-color: #424242
-}
-
-.dark header {
-    border-bottom: 6px double #5f5f5f;
-}
-
-.dark section {
-    border-right: 6px double #5f5f5f;
+    background-color: var(--dark-gray);
+    border-color: var(--gray);
 }
 
 /* header */
-header {
-    font-size: 40px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
 header p {
-    padding-right: 20px;
+    padding: 0 20px;
 }
 
 header p:hover {
     cursor: pointer;
 }
 
-/* main */
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 150%;
-}
-
-section {
-    width: 50%;
-    height: 750px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-form {
-    width: 50%;
-}
-
+/* change h1 font size when screen width is <= 768px */
 @media (max-width: 768px) {
     h1 {
         font-size: 45px;

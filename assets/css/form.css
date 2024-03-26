@@ -1,3 +1,38 @@
+/* header */
+header {
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 6px double;
+}
+
+/* main element, split the screen to show two sections */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 150%;
+}
+
+section {
+    width: 50%;
+    height: 750px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-right: 6px double;
+}
+
+form {
+    width: 50%;
+}
+
+/* form elements */
 label {
     display: block;
     padding: 15px 0 5px 0;
@@ -24,6 +59,7 @@ button:hover {
     cursor: pointer;
 }
 
+/* error message styling to show if form not filled correctly */
 #msg {
     padding-top: 15px;
     color: red;
