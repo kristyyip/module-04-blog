@@ -33,10 +33,12 @@ function addBlogPostToArray() {
 
     // retrieve current value in blogPostsArray from local storage and parse string back into an array
     blogPostsArray = JSON.parse(localStorage.getItem("blogPostsArray"));
-    let lastObject = blogPostsArray[blogPostsArray.length - 1];
 
     // validation to prevent consecutive duplicate posts, adds blogPostObject to blogPostArray if new post
-    if ((blogPostsArray.length === 0) || (lastObject.username !== blogPostObject.username) && (lastObject.title !== blogPostObject.title) && (lastObject.content != blogPostObject.content)) {
+    // can't compare two similar objects (src: https://iq.js.org/questions/javascript/why-does-it-return-false-when-comparing-two-similar-objects-in-javascript) so turned those objects into a string
+    let lastObject = JSON.stringify(blogPostsArray[blogPostsArray.length - 1]);
+
+    if ((blogPostsArray.length === 0) || lastObject !== JSON.stringify(blogPostObject)) {
         // add object to end of array
         blogPostsArray.push(blogPostObject);
 
