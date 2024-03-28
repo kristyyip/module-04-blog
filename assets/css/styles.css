@@ -9,7 +9,7 @@
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 3.25em;
     color: white;
     text-wrap: wrap;
     padding: 60px;
@@ -17,7 +17,7 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 2em;
     padding: 0 30px;
 }
 
@@ -47,9 +47,13 @@ header p:hover {
     cursor: pointer;
 }
 
-/* change h1 font size when screen width is <= 768px */
-@media (max-width: 768px) {
+/* change h1 font size and button width when screen width is <= 540px */
+@media (max-width: 540px) {
     h1 {
-        font-size: 45px;
+        font-size: 2em;
+    }
+
+    #submit {
+        min-width: fit-content;
     }
 }

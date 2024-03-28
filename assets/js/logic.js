@@ -28,7 +28,7 @@ function changeToDarkMode() {
     themeSwitcher.textContent = "\u{1F31D}";
 
     // only change img src if on index.html
-    if (window.location.href == windowLocation) {
+    if (window.location.href === windowLocation) {
         circleImg.setAttribute("src", "https://thumb.tildacdn.com/tild3765-6132-4137-b337-323536366161/-/format/webp/Ellipse_11.png")
     }
 }
