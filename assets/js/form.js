@@ -34,8 +34,5 @@ submitBtn.addEventListener("click",  function(event) {
     }
 })
 
-// add window location href to local storage on page load of index.html
-// src: https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
-window.onload = (event) => {
-    localStorage.setItem("windowLocation", window.location.href);
-}
+// add window location href of index.html to local storage
+localStorage.setItem("windowLocation", window.location.href);
