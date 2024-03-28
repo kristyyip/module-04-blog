@@ -51,11 +51,10 @@ There is also an option to change the theme to dark mode.
 ![Blog Posts Page Dark Mode](assets/images/blog_page_darkmode.png)
 
 ## Citations
-MDN contributors (2023). "Window: load event." JavaScript. https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event.
+MDN contributors (2023). "Window: load event." JavaScript. https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event. (logic.js)
 
-ruakh (2012). "Insert Unicode character into JavaScript." JavaScript. https://stackoverflow.com/questions/13093126/insert-unicode-character-into-javascript.
+ruakh (2012). "Insert Unicode character into JavaScript." JavaScript. https://stackoverflow.com/questions/13093126/insert-unicode-character-into-javascript. (logic.js)
 
-Sakhniuk, Michael (2022). "Why does it return false when comparing two similar objects in JavaScript?" JavaScript. https://iq.js.org/questions/javascript/why-does-it-return-false-when-comparing-two-similar-objects-in-javascript.
+Sakhniuk, Michael (2022). "Why does it return false when comparing two similar objects in JavaScript?" JavaScript. https://iq.js.org/questions/javascript/why-does-it-return-false-when-comparing-two-similar-objects-in-javascript. (blog.js)
 
-UltraInstict (2013). "HTML5 LocalStorage: Checking if a key exists [duplicate]." JavaScript. https://stackoverflow.com/questions/16010827/html5-localstorage-checking-if-a-key-exists.
-
+UltraInstict (2013). "HTML5 LocalStorage: Checking if a key exists [duplicate]." JavaScript. https://stackoverflow.com/questions/16010827/html5-localstorage-checking-if-a-key-exists. (blog.js)
